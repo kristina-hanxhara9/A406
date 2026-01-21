@@ -1,30 +1,288 @@
 <!DOCTYPE html>
 <html lang="sq">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>4 Agjentë Autonomë për A406 Windows</title>
+    <title>A406 Windows - Agjentët AI</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        background-color: #f8fafc;
+      body { 
+        font-family: 'Inter', sans-serif; 
+        background-color: #f8fafc; 
       }
+      /* Simple Fade In Up Animation */
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.6s ease-out forwards;
+      }
+      @keyframes fadeInUp {
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .delay-100 { animation-delay: 100ms; }
+      .delay-200 { animation-delay: 200ms; }
+      .delay-300 { animation-delay: 300ms; }
+      .delay-400 { animation-delay: 400ms; }
+      .delay-500 { animation-delay: 500ms; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "framer-motion": "https://esm.sh/framer-motion@^12.28.1"
-  }
-}
-</script>
 </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<body class="text-slate-900 pb-20 min-h-screen bg-slate-50">
+
+    <!-- Hero Section -->
+    <header class="bg-slate-900 text-white py-20 px-6 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+           <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+             <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
+           </svg>
+        </div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10 fade-in-up">
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            <span class="text-red-500">A406 Windows</span>
+          </h1>
+          <p class="text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+            Ide sesi mund të përdoret Inteligjenca Artificiale (AI) për biznesin tuaj.
+          </p>
+          <p class="text-xs md:text-sm text-slate-500 mt-6 font-bold uppercase tracking-[0.2em]">
+            Mund të shtoni apo të hiqni kë të doni!
+          </p>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-6xl mx-auto px-6 -mt-10 relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Agent 1 -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full fade-in-up delay-100">
+                <div class="bg-blue-500 p-6 text-white flex items-center justify-between">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider opacity-90 mb-1">Agjenti 1</h3>
+                        <h2 class="text-2xl font-bold">Përgjigjet me Çmime</h2>
+                    </div>
+                    <div class="bg-white/20 p-3 rounded-full backdrop-blur-sm">
+                        <i data-lucide="mail" class="w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <p class="text-slate-600 mb-6 italic border-l-4 border-slate-200 pl-4">
+                        Menaxhon kërkesat fillestare të çmimeve në mënyrë të menjëhershme.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Monitoron Gmail 24/7 pa pushim</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Identifikon fjalët 'quote' (kuotë) ose 'price' (çmim)</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Nxjerr automatikisht: Emrin, Vendndodhjen, Numrin e Dritareve</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Përgjigjet menjëherë:</span>
+                                <span class="text-slate-500 text-sm mt-1 block">Shembull: 'Për 8 dritare, rrezja është £4,800-£6,400. Rezervoni matjen falas këtu...'</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Krijon Tasks (To-Do):</span>
+                                <span class="text-slate-500 text-sm mt-1 block">'Kuotë e re - [Emri i Klientit]'</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Agent 2 -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full fade-in-up delay-200">
+                <div class="bg-amber-500 p-6 text-white flex items-center justify-between">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider opacity-90 mb-1">Agjenti 2</h3>
+                        <h2 class="text-2xl font-bold">Zgjedh klientin prioritar</h2>
+                    </div>
+                    <div class="bg-white/20 p-3 rounded-full backdrop-blur-sm">
+                        <i data-lucide="zap" class="w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <p class="text-slate-600 mb-6 italic border-l-4 border-slate-200 pl-4">
+                        Filtron dhe etiketon klientët për t'u fokusuar te më të rëndësishmit.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Lexon çdo email hyrës dhe e analizon</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-red-500 animate-pulse"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Etiketon automatikisht klientët:</span>
+                                <span class="text-slate-500 text-sm mt-1 block whitespace-pre-line">🔥 Hot Lead (Urgjente/Buxhet i qartë)
+⚡ Warm Lead (Po kërkon kuotë)
+❄️ Cold Lead (Thjesht po shikon)</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Ju njofton në Chat vetëm për klientët 'Hot'</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Ju lejon të fokusoheni te shitjet më të sigurta</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Agent 3 -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full fade-in-up delay-300">
+                <div class="bg-green-500 p-6 text-white flex items-center justify-between">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider opacity-90 mb-1">Agjenti 3</h3>
+                        <h2 class="text-2xl font-bold">Ndjek porositë</h2>
+                    </div>
+                    <div class="bg-white/20 p-3 rounded-full backdrop-blur-sm">
+                        <i data-lucide="message-circle" class="w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <p class="text-slate-600 mb-6 italic border-l-4 border-slate-200 pl-4">
+                        Siguron që asnjë klient të mos harrohet pas dërgimit të kuotës.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Pas 3 ditësh:</span>
+                                <span class="text-slate-500 text-sm mt-1 block">Dërgon: 'Përshëndetje [Emri], a keni ndonjë pyetje për kuotën?'</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Pas 7 ditësh pa përgjigje:</span>
+                                <span class="text-slate-500 text-sm mt-1 block">Dërgon: 'Ende të interesuar? Mund ta rishikojmë kuotën.'</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Pas 14 ditësh pa përgjigje:</span>
+                                <span class="text-slate-500 text-sm mt-1 block">Lëviz te dosja 'Pa Interes' (Dead Lead)</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Ju nuk harroni kurrë të bëni 'Follow-up'</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Agent 4 (Formerly Agent 5 - Social Media) -->
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-shadow duration-300 flex flex-col h-full fade-in-up delay-400">
+                <div class="bg-pink-500 p-6 text-white flex items-center justify-between">
+                    <div>
+                        <h3 class="text-sm font-bold uppercase tracking-wider opacity-90 mb-1">Agjenti 4</h3>
+                        <h2 class="text-2xl font-bold">Menaxheri Social</h2>
+                    </div>
+                    <div class="bg-white/20 p-3 rounded-full backdrop-blur-sm">
+                        <i data-lucide="share-2" class="w-8 h-8"></i>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col">
+                    <p class="text-slate-600 mb-6 italic border-l-4 border-slate-200 pl-4">
+                        Menaxhon rrjetet tuaja sociale automatikisht.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Ju thjesht hidhni fotot në Google Drive</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">AI shkruan postin (Caption):</span>
+                                <span class="text-slate-500 text-sm mt-1 block">'Dritare të reja në Palmers Green. Efiçencë energjetike A-Rated! #LondonWindows'</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Poston automatikisht në Instagram & Facebook</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mt-1.5 mr-3 w-2 h-2 rounded-full flex-shrink-0 bg-slate-300"></span>
+                            <div>
+                                <span class="text-slate-800 font-medium block">Planifikon 3 postime në javë</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Summary / CTA Card -->
+             <div class="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-2xl shadow-xl p-8 flex flex-col justify-center items-center text-center text-white border border-indigo-700 md:col-span-2 lg:col-span-1 fade-in-up delay-300">
+                <h3 class="text-2xl font-bold mb-6">Përfitimet Kryesore</h3>
+                <ul class="text-left space-y-4 w-full max-w-xs mx-auto">
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle-2" class="text-green-400 mr-3 w-6 h-6"></i>
+                        <span>Kurseni 20+ orë në javë</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle-2" class="text-green-400 mr-3 w-6 h-6"></i>
+                        <span>Zero humbje të klientëve</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle-2" class="text-green-400 mr-3 w-6 h-6"></i>
+                        <span>Marketing i vazhdueshëm</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i data-lucide="check-circle-2" class="text-green-400 mr-3 w-6 h-6"></i>
+                        <span>Më pak stres, më shumë fitim</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto px-6 mt-20 text-center text-slate-400 text-sm fade-in-up delay-400">
+        <p>© 2026 Butterfly AI. All rights reserved.</p>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>
